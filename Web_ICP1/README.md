@@ -22,9 +22,9 @@ In this repository, I created two folders name Source (contains 1 HTML file) and
   * It can be used for version control
   * Great for students to use for group project
   * Team members can work on the same project and make changes to project
-* Github Desktop makes it easier to use version control.
+* Github Desktop makes it easier to use version control
 * Alternative solution to Git (Easier for beginner to understand GUI)
-* Webstorm is useful for modern JavaScript development.
+* Webstorm is useful for modern JavaScript development
   * Provides support for JS, TS, HTML, CSS, and etc.
   * Easier to use and run solution (Previous experience using Visual Studio with ASP.NET with C# for web design)
   * Free for student use
