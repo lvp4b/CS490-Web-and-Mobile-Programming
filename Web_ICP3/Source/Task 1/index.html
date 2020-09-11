@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper-Rock-Scissors</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <span class="navbar-brand">Rock-Paper-Scissors</span>
+    </nav>
+
+    <h1>Rock-Paper-Scissors</h1>
+
+    <!-- display scores -->
+    <div id="arena">
+        <div>
+            <p>You: <span id="score"></span></p>
+            <span id="player"></span>
+            <img src="images/rocking.gif" id="option">
+        </div>
+        <div>
+            <p>CPU: <span id="cpu_score"></span></p>
+            <span id="cpu"></span>
+            <img src="images/rocking.gif" id="cpu_option">
+        </div>
+    </div>
+
+    <!-- display buttons -->
+    <div id="button">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
