@@ -1,0 +1,47 @@
+<div class="parent-container">
+  <div class="child-container">
+    <h2><b>Search for Venues
+    </b></h2><br>
+    <form>
+      <div class="form-group">
+        <div class="form-group col-lg-6 col-lg-offset-3 input-group">
+          <input #place class="form-control" placeholder="Place" type="text">
+          <span class="input-group-addon">
+            <button (click)="getVenues()" class="btn btn primary col-lg-2 col-lg-offset-4" type="button">Go
+            </button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <div class="panel panel-default col-6">
+        <div class="panel-heading"><b>Where to get</b></div>
+        <div class="panel-body">
+        <!-- display a list of venues -->
+          <div *ngFor="let venue of venueList" class="list-group-item clearfix">
+            <div class="pull-left">
+              <h4 class="list-group-item-heading">{{venue.name}}</h4>
+              <p>{{venue.location.address}}</p>
+              <p>{{venue.location.city}}, {{venue.location.state}} {{venue.location.postalCode}} </p>
+              <p>{{venue.location.country}} </p>
+            </div>
+            <span class="pull-right">
+             <a href="http://maps.google.com/maps?saddr={{currentLat}},{{currentLong}}
+             &daddr={{venue.location.formattedAddress[0]}},{{venue.location.formattedAddress[1]}},{{venue.location.formattedAddress[2]}}">
+               <img src="../../assets/google.png" style="width: 30px; height: 30px;"></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

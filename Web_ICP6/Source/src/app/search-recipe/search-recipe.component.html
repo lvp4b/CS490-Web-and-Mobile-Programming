@@ -1,0 +1,44 @@
+<div class="parent-container">
+  <div class="child-container">
+    <h2><b>Search for Recipes
+    </b></h2><br>
+    <form>
+      <div class="form-group">
+        <div class="form-group col-lg-6 col-lg-offset-3 input-group">
+          <input #recipe class="form-control" placeholder="Recipe name" type="text">
+          <span class="input-group-addon">
+            <button (click)="getRecipes()" class="btn btn primary col-lg-2 col-lg-offset-4 " type="button">Go
+            </button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="panel panel-default col-6">
+        <div class="panel-heading"><b>How to make</b></div>
+        <div class="panel-body">
+          <!-- display a list of recipes -->
+          <div *ngFor="let recipe of recipes" class="list-group">
+            <img src="{{ recipe.image }}">
+            <h2><b>{{ recipe.label }}</b></h2>
+            <p>Servings: {{ recipe.yield }} | Calories per serving: {{ recipe.calories.toFixed() }}</p>
+            <p>Diet: {{ recipe.dietLabels }}, {{ recipe.healthLabels }}</p>
+            <p>Source: <a href="{{ recipe.url }}">{{ recipe.url }}</a> </p>
+            <!-- display list of ingredients -->
+            <h3>Ingredients: </h3>
+            <div *ngFor="let ingredient of recipe.ingredients" class="list-group-item">
+              {{ingredient.text}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
